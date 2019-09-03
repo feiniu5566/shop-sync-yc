@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.sy.yc.dao.ShopTypeMapper">
+    <resultMap id="BaseResultMap" type="com.sy.yc.entity.ShopType">
+        <id column="id" property="id" jdbcType="VARCHAR" />
+        <result column="shopId" property="shopId" jdbcType="VARCHAR" />
+        <result column="shopTypeName" property="shopTypeName" jdbcType="VARCHAR" />
+        <result column="parentId" property="parentId" jdbcType="VARCHAR" />
+        <result column="sortOrder" property="sortOrder" jdbcType="VARCHAR" />
+        <result column="createTime" property="createTime" jdbcType="DATE" />
+        <result column="cTimeStamp" property="cTimeStamp" jdbcType="DATE" />
+    </resultMap>
+    <select id="selectAll" resultMap="BaseResultMap" parameterType="java.lang.String" >
+        select * FROM shopType
+    </select>
+    <!--<insert id="insertdome" parameterType="com.smart.pojo.Dome">-->
+        <!--insert into t_dome(t_username, t_password) VALUES (#{userName,jdbcType=VARCHAR},#{password,jdbcType=VARCHAR})-->
+    <!--</insert>-->
+</mapper>

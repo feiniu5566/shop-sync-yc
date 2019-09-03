@@ -1,0 +1,15 @@
+server:
+  port: 8080
+
+spring:
+  datasource:
+    name: test_ycy
+    url: jdbc:mysql://192.168.5.101:3306/gag_report_yc
+    username: root
+    password: system@123
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+
+mybatis:
+  mapper-locations: classpath:mapper/*.xml  #注意：一定要对应mapper映射xml文件的所在路径
+  type-aliases-package: com.sy.yc.entity  # 注意：对应实体类的路径
